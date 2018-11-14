@@ -53,6 +53,7 @@ Resources:
            aws s3 cp jenkins.log s3://ogbayaml/jenkins.log
            cd ..
            useradd tomcat
+           chown -R tomcat:tomcat /opt/apache-tomcat-8.0.53
            systemctl enable tomcat.service
            systemctl start tomcat.service
            #cd /etc/init.d/
